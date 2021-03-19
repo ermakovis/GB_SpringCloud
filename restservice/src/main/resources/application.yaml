@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/happy
+    username: postgres
+    password: postgres
+  jpa:
+    show-sql: true
+  application:
+    name: happy
+
+server:
+  port: 8189
+  servlet:
+    context-path: /happy
+
+eureka:
+  client:
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+
+
